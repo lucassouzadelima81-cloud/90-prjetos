@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0f0f;
+}
+
+/* container */
+.rating{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+}
+
+/* esconder inputs */
+.rating input{
+  display: none;
+}
+
+/* estrelas */
+.rating label{
+  font-size: 40px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover */
+.rating label:hover,
+.rating label:hover ~ label{
+  color: #ffcc00;
+}
+
+/* selecionado */
+.rating input:checked ~ label{
+  color: #ffcc00;
+}

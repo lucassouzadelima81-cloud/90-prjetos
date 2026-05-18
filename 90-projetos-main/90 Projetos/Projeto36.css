@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+}
+
+/* container */
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* form */
+.form{
+  background: #1c1c1c;
+  padding: 40px;
+  border-radius: 15px;
+  width: 350px;
+
+  box-shadow: 0 10px 30px rgba(255, 0, 85, 0.2);
+  text-align: center;
+}
+
+/* título */
+.form h2{
+  color: #ff0055;
+  margin-bottom: 20px;
+}
+
+/* inputs */
+.input-box{
+  margin-bottom: 15px;
+}
+
+.input-box input{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+
+  background: #2a2a2a;
+  color: white;
+}
+
+/* botão */
+button{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+
+  background: #ff0055;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover{
+  background: #ff3377;
+}
+
+/* link */
+p{
+  margin-top: 15px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+p a{
+  color: #ff0055;
+  text-decoration: none;
+}
+
+/* responsivo */
+@media(max-width: 500px){
+  .form{
+    width: 90%;
+    padding: 25px;
+  }
+}

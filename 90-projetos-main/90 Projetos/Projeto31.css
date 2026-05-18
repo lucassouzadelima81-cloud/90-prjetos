@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #0f0f0f;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container */
+.pricing{
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* cards */
+.card{
+  background: #1c1c1c;
+  width: 280px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 0, 85, 0.3);
+}
+
+.card h3{
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.card h2{
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff0055;
+}
+
+.card h2 span{
+  font-size: 14px;
+  color: #aaa;
+}
+
+.card ul{
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.card ul li{
+  margin: 10px 0;
+  color: #ddd;
+}
+
+/* botão */
+.card button{
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+
+  background: #ff0055;
+  color: white;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover{
+  background: #ff3377;
+}
+
+/* plano em destaque */
+.popular{
+  border: 2px solid #ff0055;
+  transform: scale(1.05);
+}
+
+/* responsivo */
+@media(max-width: 900px){
+  .popular{
+    transform: scale(1);
+  }
+}

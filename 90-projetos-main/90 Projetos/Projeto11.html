@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Projeto11.css">
+</head>
+
+<body>
+    <div class="toogle-btn"></div>
+    <div class="icon"></div>
+    <div class="lock-open"></div>
+
+    <script>
+        const toogleBtn = document.querySelector(".toogle-btn"),
+            lockIcon = document.querySelector(".icon");
+
+        toogleBtn.addEventListener("click", () => {
+            toogleBtn.classList.toggle("active");
+
+            if (toogleBtn.classList.contains("active")) {
+                lockIcon.classList.replace("lock-open", "lock");
+            } else {
+                lockIcon.classList.replace("lock", "lock-open");
+            }
+        });
+    </script>
+</body>
+
+</html>

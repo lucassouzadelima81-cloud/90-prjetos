@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  text-align: center;
+  background: #0f0f0f;
+  color: white;
+  padding-top: 40px;
+}
+
+h1{
+  color: #ff0055;
+  margin-bottom: 20px;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.game-area{
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background: #1c1c1c;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* alvo */
+.box{
+  width: 50px;
+  height: 50px;
+  background: #ff0055;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff0055;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
