@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0f0f;
+}
+
+/* container */
+.pagination{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+ 
+/* pages */
+.page, .btn{
+  padding: 10px 15px;
+  background: #1c1c1c;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+/* hover */
+.page:hover, .btn:hover{
+  background: #ff0055;
+}
+
+/* active page */
+.page.active{
+  background: #ff0055;
+  font-weight: bold;
+}
