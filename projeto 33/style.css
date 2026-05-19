@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0f0f;
+}
+
+/* container */
+.container{
+  text-align: center;
+  color: white;
+}
+
+h2{
+  margin-bottom: 20px;
+  color: #ff0055;
+}
+
+/* label card */
+.radio-card{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #1c1c1c;
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* esconder radio padrão */
+.radio-card input{
+  display: none;
+}
+
+/* botão custom */
+.custom-radio{
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ff0055;
+  border-radius: 50%;
+
+  display: inline-block;
+  position: relative;
+}
+
+/* ponto interno quando selecionado */
+.radio-card input:checked + .custom-radio::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+
+  background: #ff0055;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* efeito hover */
+.radio-card:hover{
+  background: #2a2a2a;
+}

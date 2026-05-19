@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Botão de Abrir com Animação de Apertar */
+.open-btn {
+    background: #00d2ff;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Transição para o clique */
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+.open-btn:active {
+    transform: scale(0.8); /* Efeito de "apertar" */
+}
+
+/* Overlay Full Screen */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.search-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Conteúdo da Pesquisa */
+.search-content {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.search-content input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    caret-color: #00d2ff; /* COR DO CURSOR AZUL */
+}
+
+/* Linha Animada embaixo do Input */
+.line {
+    width: 0;
+    height: 2px;
+    background: #00d2ff;
+    transition: 0.6s ease;
+    margin: 0 auto;
+}
+
+.search-overlay.active .line {
+    width: 100%;
+}
+
+/* Botão Fechar */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Botão de Enviar dentro do Full Screen */
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid #00d2ff;
+    color: #00d2ff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #00d2ff;
+    color: white;
+}
+
+.submit-btn:active {
+    transform: scale(0.9); /* Efeito de apertar no botão enviar */
+}

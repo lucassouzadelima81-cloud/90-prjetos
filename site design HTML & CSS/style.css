@@ -1,0 +1,72 @@
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg,#ff9a9e 10%,#f6416c 100%);
+}
+body::before
+body::after{
+    content:'';
+    position: absolute;
+    left: 0; 
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+body::before{
+    clip-path: circle(30% at left 20%);
+    background:linear-gradient(135deg,#f6416c 10%, #ff9a9e 100%);
+}
+body::after{
+    clip-path: circle(25% at right 80%);
+    background: linear-gradient(135deg,#f6416c 10% , #ff9a9e);
+}
+header{
+    height: 85vh;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgb(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+header .navbar{
+    width: 100%;
+    display: flex;
+    padding: 35px 50px;
+    justify-content: space-between;
+}
+header .navbar .logo a{
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+}
+header .navbar .menu{
+    display: flex;
+}
+.navbar .menu li{
+  list-style: none;
+  margin: 0 6px;
+}
+.navbar .menu a{
+    text-decoration: none;
+    color:#000 ;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.navbar .menu a:hover{
+    color: #f2f2f2;
+}
